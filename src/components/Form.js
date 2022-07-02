@@ -1,4 +1,4 @@
-const Form = ({value, setValue, onClick, ...props}) => {
+const Form = ({value, setValue, onClick}) => {
     const onChange = (event) => {
         setValue(event.target.value)
     }
@@ -9,16 +9,16 @@ const Form = ({value, setValue, onClick, ...props}) => {
     
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <label>Choose your number : </label>
-                <input 
-                placeholder={value}
-                type='number'
-                onChange={onChange}
-                value={value}
-            />
-            <button type="submit" onClick={onClick}>Try it!</button>
-        </form>
+            <form onSubmit={handleSubmit}>
+                <label>Guess the number (between 0 and 100): </label>
+                    <input 
+                    placeholder={value}
+                    type='number'
+                    onChange={onChange}
+                    value={value}
+                />
+                <button type="submit" onClick={onClick}>Let's go!</button>
+            </form>
         </>
     )
 }

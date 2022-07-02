@@ -7,9 +7,6 @@ const Play = ({number, round, setRound}) => {
     const [value, setValue] = useState('')
     const [message, setMessage] = useState('')
 
-    console.log({value})
-    console.log({number})
-
     const updateRound = () => {
         setRound(round + 1)
     }
@@ -24,9 +21,9 @@ const Play = ({number, round, setRound}) => {
 
     const results = () => {
             if (value > number) {
-                setMessage(<p><span>Lower than</span> {value}</p>) 
+                setMessage(<p><span>The number is lower than {value}.</span></p>) 
             } else {
-                setMessage(<p><span>Greater than</span> {value}</p>)
+                setMessage(<p><span>The number is greater than {value}.</span></p>)
             }
     }
 
@@ -41,14 +38,14 @@ const Play = ({number, round, setRound}) => {
 
     return (
         <>
-        { round == 0 ?
-        <h2>Enter your number</h2> :
-        <div>
-            <h2>Enter another number</h2>
-            {message}
-        </div> }
-        <p>round : {round}</p>
-        <Form value={value} setValue={setValue} onClick={onClick} number={number} message={message} setMessage={setMessage} />
+            { round == 0 ?
+            <h2>Enter your number</h2> :
+            <div>
+                <h2>Wrong, guess again!</h2>
+                {message}
+            </div> }
+            <p>Round n°{round}</p>
+            <Form value={value} setValue={setValue} onClick={onClick} />
         </>
     )
 }

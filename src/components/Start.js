@@ -3,9 +3,10 @@ import Button from "./Button"
 const Start = props => {
 
     return (
-        <div className="card">
-            <Button className="btn-start" action="Start" number={props.number} setNumber={props.setNumber} setRound={props.setRound} />
-        </div>
+        <>
+            <h1>Let's play a game !</h1>
+            <Button action="Start" number={props.number} setNumber={props.setNumber} setRound={props.setRound} />
+        </>
     )
 }
 
