@@ -1,4 +1,6 @@
-# Guess my number
+# Tech enterview (work and study)
+
+## Guess my number
 
 Fork this and write a little application "Guess my number"
 
